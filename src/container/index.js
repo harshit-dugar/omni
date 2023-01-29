@@ -1,0 +1,9 @@
+export {default as Footer} from "./Footer";
+export {default as Header} from "./Header";
+export {default as Hero} from "./Hero";
+export {default as Testinomail} from "./Testinomial";
+export {default as Benefits} from "./Benefits";
+export {default as House} from "./House";
+export {default as Working} from "./Working";
+export {default as Qna} from "./Qna";
+export {default as workingList} from "../lists/workingList";
