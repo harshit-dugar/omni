@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Banner,Footer,Qna,Working} from '../container';
+import {Header,Banner,Footer,Qna,Working,Orders} from '../container';
 import '../components/style/order.css'
 
 function Order () {
@@ -44,6 +44,8 @@ function Order () {
       }
     return (
         <div className="order">
+            <Header />
+            <Orders />
             <Working />
             <Banner />
             <div className="qna_container">

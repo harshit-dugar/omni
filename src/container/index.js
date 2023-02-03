@@ -8,3 +8,4 @@ export {default as Working} from "./Working";
 export {default as Banner} from "./Banner";
 export {default as Qna} from "./Qna";
 export {default as workingList} from "../lists/workingList";
+export {default as Orders} from "./Orders";

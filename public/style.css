@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background:url('/src/assets/Noisebg.png') ;
+    background: #EAEAEA;
     height: 100%;
 }
 a{
@@ -18,7 +18,7 @@ a{
 
 /* Navbar */
 .navbar{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -72,7 +72,7 @@ a{
 }
 .hero .hero_container{
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     width: 100%;
     height:120%;
