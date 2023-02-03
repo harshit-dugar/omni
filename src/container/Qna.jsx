@@ -1,10 +1,19 @@
 import React from "react";
 
-function Qna(){
+function Qna({faq, index, toggleFAQ}){
     return(
-        <div>
-            <h1>Hello Qna</h1>
-        </div>
+        <div
+			className={"faq " + (faq.open ? 'open' : '')}
+			key={index}
+			onClick={() => toggleFAQ(index)}
+		>
+			<div className="faq-question">
+				{faq.question}
+			</div>
+			<div className="faq-answer">
+				{faq.answer}
+			</div>
+		</div>
     );
 }
 

@@ -1,0 +1,157 @@
+.aboutUs{
+    position: relative;
+    background: #EAEAEA;
+}
+.aboutUs .logo{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+}
+.aboutUs .logo h1{
+    font-weight: 800;
+    font-size: 200px;
+    line-height: 94.87%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #141414;
+    margin-bottom: 2rem;
+}
+.aboutUs .logo p{
+    position: absolute;
+    bottom: 80px;
+    right: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #545454;
+}
+/* Story */
+.story_container{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    height: 100%;
+    background: #141414;
+}
+.story_container .story_head{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    height: 100%;
+    color: #EAEAEA;
+    padding-top:4rem;
+    padding-bottom: 8rem;
+}
+.story_container .story_head h1{
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 67px;
+    text-align: center;
+}
+.story_container .story_head img{
+    width: 340px;
+    height: 500px;
+    margin: 2rem 0;
+}
+.story_container .story_head p{
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    margin: 2rem 0;
+}
+.story_container .story{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+    height: 100%;
+    color: #EAEAEA;
+    padding:4rem 0;
+    margin: 10rem 0;
+}
+.story_container .story .main{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 24px;
+}
+.story_container .story .story_video video{
+    width: 100%;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+.story_container .story p{
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+/* QNA */
+.qna_container{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    background: #EAEAEA;
+}
+.qna_container h1{
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 94.87%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #141414;
+    margin-bottom: 2rem;
+}
+.qna_container .faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	margin: 15px 0;
+    cursor: pointer;
+}
+
+.qna_container .faq .faq-question {
+	position: relative;
+	font-weight: 300;
+    font-size: 15px;
+    line-height: 29px;
+    text-align: center;
+    color: #141414;
+	transition: all 0.2s ease;
+}
+.qna_container .faq .faq-answer {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: #141414;
+	opacity: 0;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: all 0.2s ease-out;
+}
+.qna_container .faq.open .faq-question {
+	margin-bottom: 15px;
+}
+.qna_container .faq.open .faq-answer {
+	max-height: 1000px;
+	opacity: 1;
+}

@@ -1,0 +1,20 @@
+.container .child_container_room{
+    position: relative;
+    overflow: hidden;
+}
+.container .child_container_room video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .child_container_room p{
+    position: absolute;
+    top: 165px;
+    left: 96px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 94.87%;
+    text-transform: capitalize;
+    color: #141414;
+}

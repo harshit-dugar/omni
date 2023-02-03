@@ -1,0 +1,55 @@
+/* QNA */
+.qna_container{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    background: #EAEAEA;
+}
+.qna_container h1{
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 94.87%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #141414;
+    margin-bottom: 2rem;
+}
+.qna_container .faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	margin: 15px 0;
+    cursor: pointer;
+}
+
+.qna_container .faq .faq-question {
+	position: relative;
+	font-weight: 300;
+    font-size: 15px;
+    line-height: 29px;
+    text-align: center;
+    color: #141414;
+	transition: all 0.2s ease;
+}
+.qna_container .faq .faq-answer {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: #141414;
+	opacity: 0;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: all 0.2s ease-out;
+}
+.qna_container .faq.open .faq-question {
+	margin-bottom: 15px;
+}
+.qna_container .faq.open .faq-answer {
+	max-height: 1000px;
+	opacity: 1;
+}

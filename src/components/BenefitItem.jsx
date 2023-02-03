@@ -1,5 +1,5 @@
 import React from "react";
-import '../components/style/benefit.css'
+import '../components/style/benefit.css';
 
 function BenefitItem(props){
     return(
