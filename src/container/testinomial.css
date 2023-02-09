@@ -60,3 +60,17 @@
 .testinomial img{
     margin-top: 30px;
 }
+@media screen and (max-width: 768px){
+    .test_container{
+        padding: 50px 10px;
+        height: 100%;
+        display: none;
+    }
+    .test_container .testinomial_container{
+        padding: 100px 20px;
+        width: 100%;
+    }
+    .test_container .testinomial_container .testinomial{
+        margin: 0px 20px;
+    }
+}

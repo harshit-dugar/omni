@@ -5,7 +5,24 @@
     height: 100%;
     background: #EAEAEA;
 }
-
+.order .order_vector{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.order .order_vector .product_view{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.order_vector .product_view img{
+    height: 120px;
+}
 /* QNA */
 .qna_container{
     position: relative;

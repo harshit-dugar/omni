@@ -6,8 +6,7 @@
 }
 .container .child_container .benefit_section{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 2rem 0;
+    grid-template-columns: 60% 40%;
     height: 100%;
 }
 .container .child_container .benefit_section .benefit_section_left{
@@ -15,9 +14,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15%;    
+    padding: 20%;    
     background:#141414;
-    height: 80%;
+    height: 100%;
 }
 .container .child_container .benefit_section .benefit_section_left h2{
     font-style: normal;
@@ -31,7 +30,7 @@
 }
 .container .child_container .benefit_section .benefit_section_left p{
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
@@ -40,23 +39,45 @@
 }
 .benefit_section .benefit_section_left button{
     padding: 10px 20px;
-    border-radius: 5px;
     border: none;
     background: #EAEAEA;
     color: #141414;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 2rem;
+    transition: all 0.2s ease;
 }
 .benefit_section .benefit_section_left button:hover{
     background:#141414;
     color: #EAEAEA;
-    border: 1px solid #EAEAEA;
+    border: 2px solid #EAEAEA;
 }
 .container .child_container .benefit_section .benefit_section_right{
-    height: 80%;
+    height: 100%;
 }
 .container .child_container .benefit_section .benefit_section_right img{
     width: 100%;
     height: 100%;
+}
+@media screen and (max-width: 768px){
+    .container .child_container .benefit_section{
+        display: flex;
+        flex-direction: column;
+    }
+    .container .child_container .benefit_section .benefit_section_left{
+        padding: 10%;
+    }
+    .container .child_container .benefit_section .benefit_section_left h2{
+        font-size: 30px;
+    }
+    .container .child_container .benefit_section .benefit_section_left p{
+        font-size: 16px;
+    }
+    .container .child_container .benefit_section .benefit_section_right{
+        height: 50%;
+    }
+    .container .child_container .benefit_section .benefit_section_right img{
+        width: 100%;
+        height: 100%;
+    }
 }

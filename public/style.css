@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+@import url('./geoslab703_lt_bt/GeoSlab703LtBTLightItalic.ttf');
+@font-face {
+    font-family: 'GeoSlab703 Lt BT';
+    src: url('./geoslab703_lt_bt/GEO703L.ttf');
+}
 *{
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'GeoSlab703 Lt BT';
     scroll-behavior: smooth;
 }
 body{
     background: #EAEAEA;
-    height: 100%;
 }
 a{
     color: unset;
@@ -48,7 +50,6 @@ a{
 }
 .navbar button{
     padding: 10px 20px;
-    border-radius: 5px;
     border: none;
     background: #000;
     color: #fff;
@@ -59,15 +60,44 @@ a{
 .navbar button:hover{
     background: rgba(255, 255, 255, 0.2);
     color: #000;
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
+@media (max-width: 768px){
+    .navbar{
+        padding: 2rem 2rem;
+    }
+    .navbar .navbar_menu{
+        position: absolute;
+        top: 85px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #fff;
+        transition: all 0.3s ease-in;
+    }
+    .navbar .navbar_menu .navbar_links{
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+    .navbar .navbar_menu .navbar_links li{
+        margin: 1rem 0;
+    }
+    .navbar .navbar_menu .navbar_links li a{
+        font-size: 1.5rem;
+    }
+}
+
 /* Hero */
 .hero{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 130vh;
+    height: 110vh;
     background: #EAEAEA;
 }
 .hero .hero_container{
@@ -94,29 +124,29 @@ a{
 }
 .hero .hero_container .hero_head p{
     font-size: 30px;
-    font-weight: 100;
+    font-weight: 400;
     margin-bottom: 2rem;
 }
 .hero .hero_container .hero_head h1{
     font-size: 60px;
-    font-weight: 500;
+    font-weight: 700;
 }
 .hero .hero_container img{
     position: absolute;
     top: 150px;
-    left: 35%;
+    left: 37%;
     height: 150px;
     z-index: 2;
 }
 .hero .hero_container .hero_video {
     position: absolute;
     top: 215px;
-    left: 40%;
+    left: 42%;
     z-index: 1;
 }
 .hero .hero_container .hero_text{
     position: absolute;
-    top: 740px;
+    top: 730px;
     left: 50%;
     font-style: normal;
     font-weight: 400;
@@ -129,14 +159,13 @@ a{
 }
 .hero .hero_container button{
     position: absolute;
-    top: 840px;
+    top: 820px;
     left: 45%;
     padding: 10px 20px;
-    border-radius: 5px;
     border: none;
     background: #141414;
     color: #EAEAEA;
-    font-size: 1rem;
+    font-size:20px;
     cursor: pointer;
     z-index: 2;
     transition: all 0.2s ease;
@@ -144,22 +173,32 @@ a{
 .hero .hero_container button:hover{
     background: rgba(255, 255, 255, 0.2);
     color: #000;
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
     .hero .hero_container .hero_head p{
         font-size: 20px;
     }
     .hero .hero_container .hero_head h1{
         font-size: 40px;
     }
+    .hero .hero_container img{
+        left:7%;
+    }
+    .hero .hero_container .hero_video {
+        left: 20%;
+    }
     .hero .hero_container .hero_text{
         font-size: 15px;
+        top: 800px;
     }
     .hero .hero_container button{
         font-size: 0.8rem;
+        top: 70%;
+        left: 40%;
     }
 }
+
 
 /* About */
 .container{
@@ -169,11 +208,10 @@ a{
     justify-content:center;
     height: 100vh;
     background: #EAEAEA;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
 }
 .container .about_section{
     position: absolute;
-    top: 25%;
     left: 0%;
     width: 100%;
     height:100%;
@@ -185,7 +223,7 @@ a{
 }
 .container .about_section .about_p{
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 30px;
     line-height: 94.87%;
     text-align: center;
@@ -197,28 +235,20 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction:row;
-    text-align: center;
+    flex-direction: row;
 }
 .container .about_section .about_media img{
     width: 210px;
     height: 331px;
+    flex:none;
+    flex-grow: 0;
     margin: 1rem 1rem;
-    filter:grayscale(100%);
-    --webkit-transition: all .8s ease-in-out; 
-    transition: all .1s ease-in-out;
-}
-.container .about_section .about_media img:hover{
-    filter: none;
-    --webkit-filter: grayscale(0);
-    --webkit-transform: scale(1.05);
-    transform: scale(1.05);
 }
 .container .about_section a{
     width: 151px;
     height: 22px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 22px;
     line-height: 94.87%;
     text-align: center;
@@ -226,7 +256,39 @@ a{
     color: #231F20;
     z-index: 2;
 }
-
+.container .about_section a:hover{
+    color: #141414;
+    font-weight: 900; 
+    transition: all 0.2s ease;
+}
+.about_section a::after{
+    content: "";
+    position: absolute;
+    width: 6%;
+    height: 1px;
+    background: #141414;
+    bottom: 20.5%;
+    left: 47%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.about_section a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+@media (max-width: 768px){
+    .container .about_section .about_p{
+        font-size: 20px;
+    }
+    .container .about_section .about_media img{
+        width: 150px;
+        height: 250px;
+    }
+    .container .about_section a{
+        font-size: 15px;
+    }
+}
 /* Banner */
 .banner{
     position: relative;
@@ -419,12 +481,15 @@ a{
     color: #EAEAEA;
     border: 2px solid #EAEAEA;
 }
-@media screen and (max-width: 400px){
+@media (max-width: 900px){
     .banner .contents{
         left: 10%;
         width: 80%;
     }
-    .footer .footer_container .footer_brand{
+    .footer .footer_container ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
     .footer .footer_container .footer_brand button{
