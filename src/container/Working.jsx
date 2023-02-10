@@ -3,8 +3,18 @@ import { Work } from "../components";
 import { workingList } from "./index";
 
 function Working(){
+    const heading = {
+        fontWeight: "700",
+        fontSize: "60px",
+        lineHeight: "94.87%",
+        textAlign: "center",
+        textTransform: "capitalize",
+        color: "#141414",
+        margin: "200px 0px 50px 0px"
+    }
     return(
         <div>
+        <h1 style={heading}><strong>How It Works</strong></h1>
         <Work 
             head={workingList.workSection[0].title}
             description={workingList.workSection[0].description}

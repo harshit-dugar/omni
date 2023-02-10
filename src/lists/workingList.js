@@ -1,5 +1,5 @@
 import Image1 from '../assets/benefit2.png'
-import Image2 from '../assets/benefit3.png'
+import Image2 from '../assets/work.svg'
 import Image3 from '../assets/benefit1.png'
 const workingList = {
     workSection: [

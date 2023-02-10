@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Story from './Story';
 import {Banner,Footer,Qna} from '../../container';
+import logo from '../../assets/hero/Logo.svg';
 import './aboutUs.css';
 
 function AboutUs () {
@@ -46,7 +47,7 @@ function AboutUs () {
     return (
         <div className="aboutUs">
             <div className="logo">
-                <h1>Omni</h1>
+                <img src={logo} alt="logo"/>
                 <p>"Scroll Down"</p>
             </div>
             <Story />

@@ -3,7 +3,8 @@ import { Menu as FMenu} from '../components/Navbar';
 import instagram from '../assets/icons/instagram.png';
 import youtube from '../assets/icons/youtube.png';
 import twitter from '../assets/icons/twitter.png';
-
+import logo from '../assets/Logo.svg';
+import { Link } from "react-router-dom";
 
 function Footer(){
     return(
@@ -18,9 +19,9 @@ function Footer(){
                     <a href="https://www.youtube.com/"><img src={youtube} alt="Youtube"/></a>
                 </div>
                 <div className="footer_brand">
-                    <a href="/">Omni</a>
+                    <a href="/"><img src={logo} alt="logo"/></a>
                     <p>Omni & co. @ 2022. All Rights Reserved</p>
-                    <button>Order Now</button>
+                    <Link to="/order"><button>Order Now</button></Link>
                 </div>
             </div>
         </div>

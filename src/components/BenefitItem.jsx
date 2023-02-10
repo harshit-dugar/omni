@@ -2,8 +2,22 @@ import React from "react";
 import '../components/style/benefit.css';
 
 function BenefitItem(props){
+    function reveal(){
+        var reveals = document.getElementsByClassName("reveal");
+        for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 300;
+            if(elementTop < windowheight - revealPoint){
+                reveals[i].classList.add('active');
+            }else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    window.addEventListener('scroll',reveal);
     return(
-        <div id="benefit" className="container">
+        <div id="benefit" className="container reveal">
             <div className="child_container">
                 <div className="benefit_section">
                     <div className="benefit_section_left">

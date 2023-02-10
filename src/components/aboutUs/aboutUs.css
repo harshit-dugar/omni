@@ -10,10 +10,9 @@
     justify-content:center;
     height: 100vh;
 }
-.aboutUs .logo h1{
-    font-weight: 800;
-    font-size: 200px;
-    line-height: 94.87%;
+.aboutUs .logo img{
+    width: 775.76px;
+    height: 228.9px;
     text-align: center;
     text-transform: capitalize;
     color: #141414;
@@ -100,6 +99,78 @@
     line-height: 24px;
     text-align: center;
 }
+@media screen and (max-width: 768px){
+    .aboutUs .logo img{
+        width: 500px;
+        height: 150px;
+    }
+    .story_container .story_head h1{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 67px;
+    }
+    .story_container .story_head img{
+        width: 240px;
+        height: 350px;
+    }
+    .story_container .story_head p{
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 29px;
+    }
+    .story_container .story .main{
+        font-style: normal;
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .story_container .story .story_video video{
+        width: 100%;
+        border-radius: 50%;
+        margin: 2rem 0;
+    }
+    .story_container .story p{
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+@media screen and (max-width: 480px){
+    .aboutUs .logo img{
+        width: 300px;
+        height: 90px;
+    }
+    .story_container .story_head h1{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 67px;
+    }
+    .story_container .story_head img{
+        width: 200px;
+        height: 300px;
+    }
+    .story_container .story_head p{
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 29px;
+    }
+    .story_container .story .main{
+        font-style: normal;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .story_container .story .story_video video{
+        width: 100%;
+        border-radius: 50%;
+        margin: 2rem 0;
+    }
+    .story_container .story p{
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
 /* QNA */
 .qna_container{
     position: relative;
@@ -154,4 +225,30 @@
 .qna_container .faq.open .faq-answer {
 	max-height: 1000px;
 	opacity: 1;
+}
+@media screen and (max-width: 768px){
+    .qna_container h1{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 94.87%;
+    }
+    .qna_container .faq .faq-question {
+        font-size: 13px;
+    }
+    .qna_container .faq .faq-answer {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .qna_container h1{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 94.87%;
+    }
+    .qna_container .faq .faq-question {
+        font-size: 12px;
+    }
+    .qna_container .faq .faq-answer {
+        font-size: 11px;
+    }
 }

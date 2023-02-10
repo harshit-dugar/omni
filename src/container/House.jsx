@@ -4,7 +4,7 @@ import room from '../assets/videos/Room video/Desktop.mp4'
 
 function House(){
     return(
-        <div id="room" className="container">
+        <div id="room" className="container " data-aos="fade-right">
             <div className="child_container_room">
                 <p>Amazing for <br/> your house</p>
                 <video autoPlay loop muted src={room}/>

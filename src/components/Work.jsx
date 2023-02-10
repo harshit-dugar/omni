@@ -1,17 +1,32 @@
 import React from "react";
+import '../components/style/work.css';
 
 function Work(props){
+    function reveal(){
+        var reveals = document.getElementsByClassName("reveal");
+        for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+            if(elementTop < windowheight - revealPoint){
+                reveals[i].classList.add('active');
+            }else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    window.addEventListener('scroll',reveal);
     return(
-        <div id="benefit" className="container">
-            <div className="child_container">
-                <div className="benefit_section">
-                    <div className="benefit_section_left">
+        <div id="work" className="container reveal">
+            <div className="child_container_w">
+                <div className="work_section">
+                    <div className="work_section_right">
+                        <img src={props.image} alt="working" />
+                    </div>
+                    <div className="work_section_left">
                         <h2>{props.head}</h2>
                         <p>{props.description}</p>
                         <button>{props.button}</button>
-                    </div>  
-                    <div className="benefit_section_right">
-                        <img src={props.image} alt="benfits" />
                     </div>
                 </div>
             </div>

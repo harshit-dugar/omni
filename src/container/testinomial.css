@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #F2F2F2;
+    background: #eaeaea;
     padding: 90px 50px;
     display: flex;
     flex-direction: column;
@@ -10,9 +10,10 @@
     align-items: center;
 }
 .test_container p{
-    font-weight: 100;
-    font-size: 15px;
-    line-height: 24px;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 94px;
+    padding-top: 100px;
     text-align: center;
     text-transform: capitalize;
     color: #141414;
@@ -21,7 +22,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #F2F2F2;
     padding: 100px 50px;
     display: flex;
     flex-direction: row;
@@ -30,28 +30,29 @@
 }
 .test_container .testinomial_container .testinomial{
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 50px;
+    padding: 50px 0px;
     margin: 0px 140px;
     border: 10px solid #141414;
 }
 .testinomial p{
-    font-weight: 100;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 22px;
     line-height: 26px;
     text-align: center;
     text-transform: capitalize;
     color: #141414;
-    margin-bottom: 25px;
+    padding: 50px 0px;
 }
 .testinomial h2{
-    font-weight: 200;
-    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
     line-height: 94.87%;
     text-align: center;
     text-transform: capitalize;

@@ -18,3 +18,12 @@
     text-transform: capitalize;
     color: #141414;
 }
+@media screen and (max-width: 768px){
+    .container .child_container_room p{
+        top: 10px;
+        left: 50px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 94.87%;
+    }
+}
