@@ -394,6 +394,31 @@ a{
     color: #141414;
     border: 2px solid #141414;
 }
+@media screen and (max-width: 1024px) {
+    .banner .contents{
+        width: 100;
+        height: 100%;
+    }
+    .banner .contents img{
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+    }
+    .banner .contents p{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 94.87%;
+    }
+    .banner .contents h2{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 94.87%;
+    }
+    .banner .contents button{
+        top: 55%;
+        font-size: 0.8rem;
+    }
+}
 @media screen and (max-width: 768px){
     .banner{
         margin-top: 200px;

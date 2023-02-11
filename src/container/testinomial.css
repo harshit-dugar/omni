@@ -30,7 +30,7 @@
 }
 .test_container .testinomial_container .testinomial{
     position: relative;
-    width: 100%;
+    width: 474px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,13 @@
 }
 .testinomial img{
     margin-top: 30px;
+}
+@media screen and (max-width: 1024px){
+    .test_container{
+        padding: 50px 10px;
+        height: 100%;
+        display: none;
+    }
 }
 @media screen and (max-width: 768px){
     .test_container{
