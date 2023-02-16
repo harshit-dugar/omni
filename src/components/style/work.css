@@ -1,7 +1,7 @@
 .container .child_container_w{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     background: #EAEAEA;
 }
 .container .child_container_w .work_section{
@@ -11,13 +11,14 @@
 }
 .reveal{
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(15px);
     opacity: 0;
     transition: 0.5s all ease-out;
 }
 .reveal.active{
     transform: translateY(0);
     opacity: 1;
+    height: 100%;
   }
 .container .child_container_w .work_section .work_section_left{
     display: flex;

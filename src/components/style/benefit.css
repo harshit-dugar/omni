@@ -12,13 +12,14 @@
 }
 .reveal{
     position: relative;
-    transform: translateY(300px);
+    transform: translateY(30px);
     opacity: 0;
     transition: 0.5s all ease-out;
 }
 .reveal.active{
     transform: translateY(0);
     opacity: 1;
+    height: 100%;
   }
 .container .child_container .benefit_section .benefit_section_left{
     display: flex;
@@ -94,6 +95,9 @@
     }
 }
 @media screen and (max-width: 768px){
+    .container .child_container .benefit_section{
+        height: 100%;
+    }
     .container .child_container .benefit_section .benefit_section_left{
         padding: 10%;
     }

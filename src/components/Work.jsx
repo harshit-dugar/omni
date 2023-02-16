@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import '../components/style/work.css';
 
 function Work(props){
@@ -7,7 +8,7 @@ function Work(props){
         for(var i = 0; i < reveals.length; i++){
             var windowheight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 150;
+            var revealPoint = 15;
             if(elementTop < windowheight - revealPoint){
                 reveals[i].classList.add('active');
             }else{
@@ -26,7 +27,7 @@ function Work(props){
                     <div className="work_section_left">
                         <h2>{props.head}</h2>
                         <p>{props.description}</p>
-                        <button>{props.button}</button>
+                        <Link to="/order"><button>{props.button}</button></Link>
                     </div>
                 </div>
             </div>

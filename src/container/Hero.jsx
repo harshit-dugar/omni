@@ -1,5 +1,6 @@
 import React from "react";
 import badge1 from "../assets/hero/Badge1.png";
+import { Link } from "react-router-dom";
 import herovideo from "../assets/videos/Hero/desktop.mp4";
 
 function Hero(){
@@ -12,11 +13,12 @@ function Hero(){
                 </div>
                 <img className="hero_image" src={badge1} alt="hero"/>
                 <video className="hero_video" autoPlay loop muted src={herovideo} height='420' width={245}/>
+                <p className="scroll">*scroll down*</p>
                 <p className="hero_text">Companies are dying for your attention and they pay “The Advertisers” 
                     Billions of dollars for it. We are cutting the middleman out of the equation,
                     so you get paid for your attention
                 </p>
-                <button>Order Now</button>
+                <Link to="/order"><button>Order Now</button></Link>
             </div>
         </div>
     );

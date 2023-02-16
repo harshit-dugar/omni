@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../components/style/benefit.css';
 
 function BenefitItem(props){
@@ -7,7 +8,7 @@ function BenefitItem(props){
         for(var i = 0; i < reveals.length; i++){
             var windowheight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 300;
+            var revealPoint = 30;
             if(elementTop < windowheight - revealPoint){
                 reveals[i].classList.add('active');
             }else{
@@ -23,7 +24,7 @@ function BenefitItem(props){
                     <div className="benefit_section_left">
                         <h2>{props.head}</h2>
                         <p>{props.description}</p>
-                        <button>{props.button}</button>
+                        <Link to="/order"><button>{props.button}</button></Link>
                     </div>  
                     <div className="benefit_section_right">
                         <img src={props.image} alt="benfits" />
