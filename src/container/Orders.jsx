@@ -33,6 +33,24 @@ function Orders(){
             image: product4
         }
     ]
+    const productsthumbs = [
+        {
+            id: 1,
+            image: product1
+        },
+        {
+            id: 2,
+            image: product2
+        },
+        {
+            id: 3,
+            image: product2
+        },
+        {
+            id: 4,
+            image: product1
+        }
+    ]
     const [product, setProduct] = useState(productsthumb[0]);
     const handleProductThumb = (e) => {
         const id = e.target.id;
@@ -51,7 +69,7 @@ function Orders(){
                 </div>
                 <div className="thumb">
                     <div className="thumb_img">   
-                        {productsthumb.map((product) => (
+                        {productsthumbs.map((product) => (
                             <img src={product.image} alt="product" id={product.id} onClick={handleProductThumb} />
                         ))}
                     </div>
@@ -97,8 +115,8 @@ function Orders(){
                             : null
                         }
                     </div>
+                    <button className=".button">Add to cart</button>
                 </div>
-                <button>Order Now</button>
             </div>
         </div>
     )

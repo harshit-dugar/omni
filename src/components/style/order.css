@@ -53,10 +53,12 @@
     margin-left: 1rem;
     filter: grayscale(100%);
 }
-.thumb_img img:active{
+.order .order_vector .thumb .thumb_img img:focus,
+.order .order_vector .thumb .thumb_img img:hover,
+.order .order_vector .thumb .thumb_img img:active{
     filter: grayscale(0%);
 }
-.order .order_vector .thumb .thumb_video img{
+.order .order_vector .thumb .thumb_video video{
     width: 60px;
     height: 60px;
     border: 0.5px solid rgba(20, 20, 20, 0.2);
@@ -64,7 +66,7 @@
     margin-left: 1rem;
     filter: grayscale(100%);
 }
-.thumb_video img:active{
+.thumb_video video:active{
     filter: grayscale(0%);
 }
 .thumb .play1{
@@ -75,7 +77,7 @@
     position: absolute;
     left:540px;
 }
-.order_section .order_description{
+.order .order_section .order_description{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -125,6 +127,7 @@
     width: 100%;
     top: 20%;
     left: 0%;
+    padding: 0rem 5rem;
 }
 .order_description .product_type p{
     position: absolute;
@@ -137,18 +140,18 @@
     line-height: 100%;
     text-transform: capitalize;
     color: #141414;
+    padding-left: 1rem;
 }
 .order_description .product_type .type_select{
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-around;
-    width: 100%;
 }
 .order_description .product_type .type_select input{
     width: 280px;
     height: 70px;
-    margin: 2rem 2rem;
+    margin: 2rem 0rem;
     background: rgba(20, 20, 20, 0.02);
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
@@ -162,6 +165,7 @@
     width: 100%;
     top: 45%;
     left: 0%;
+    padding: 0rem 5rem;
 }
 .order_description .product_size p{
     position: absolute;
@@ -174,23 +178,23 @@
     line-height: 100%;
     text-transform: capitalize;
     color: #141414;
+    padding-left: 1rem;
 }
 .order_description .product_size .size_select{
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-around;
-    width: 100%;
 }
 .order_description .product_size .size_select input{
     width: 280px;
     height: 70px;
-    margin: 2rem 2rem;
+    margin: 2rem 0rem;
     background: rgba(20, 20, 20, 0.02);
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
 }
-.order_description .description{
+.order .order_section .order_description .description{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -200,11 +204,18 @@
     left: 0%;
 }
 .order_description .description .d_head{
-    width: 588px;
-    height: 24px;
+    width: 400px;
+    height: 18px;
+    font-family: 'GeoSlab703 Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #141414;
 }
-.order_description .description .description_text{
-    height: 310px;
+.order .order_section .order_description .description .description_text{
+    position: relative;
     font-family: 'Geometric Slabserif 703 Light';
     font-style: normal;
     font-weight: 300;
@@ -213,13 +224,17 @@
     text-transform: capitalize;
     color: #141414;
     margin: 2rem 0rem;
+    padding-right: 2rem;    
 }
 .order_description .description .description_text p{
     margin: 1rem 0rem;
 }
+.order_description .description .description_text ul LI{
+    margin: 3px 2rem;
+}
 .order_description button{
-    position: absolute;
-    top: 90%;
+    position: relative;
+    top: 40%;
     width:500px;
     height: 48px;
     background: #141414;
@@ -242,29 +257,36 @@
     border: 2px solid #000;
 }
 @media screen and (max-width: 1024px) {
-   .order .order_section{
+    .order .order_section{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .order .order_vector .product_view img{
-        height: 212px;
-        width: 390px;
-    }
-    .order .order_vector .thumb_img img{
-        width: 40px;
-        height: 40px;
-    }
-    .order .order_vector .thumb_video video{
-        width: 40px;
-        height: 40px;
-    }
     .order .order_vector .thumb .play1{
-        left: 220px;
+        left: 53%;
     }
     .order .order_vector .thumb .play2{
-        left: 300px;
+        left: 60%;
+    }
+    .order_section .order_description{
+        height: 80vh;
+    }
+    .order .order_section .order_description .product_type{
+        top: 15%;
+    }
+    .order .order_section .order_description .product_size{
+        top: 30%;
+    }
+    .order .order_section .order_description .description{
+        top: 45%;
+        padding: 0rem 1rem;
+    }
+    .order .order_section .order_description .description button{
+        padding: 16px 18px;
+        gap: 10px;
+        width: 728px;
+        height: 50px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -274,24 +296,56 @@
         align-items: center;
         justify-content: center;
     }
-    .order .order_vector .product_view img{
-        height: 212px;
-        width: 390px;
-    }
-    .order .order_vector .thumb_img img{
-        width: 40px;
-        height: 40px;
-    }
-    .order .order_vector .thumb_video video{
-        width: 40px;
-        height: 40px;
+    .order .order_vector .product_view{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        Width:1023px;
+        Height:550px;
     }
     .order .order_vector .thumb .play1{
-        left: 220px;
+        left: 53%;
     }
     .order .order_vector .thumb .play2{
-        left: 300px;
-    }   
+        left: 60%;
+    }
+    .order_section .order_description{
+        height: 100vh;
+    }
+    .order .order_section .order_description .product_info h1{
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 100%;
+        margin-bottom: 1rem;
+    }
+    .order .order_section .order_description .product_info p{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+    }
+    .order .order_section .order_description .product_type{
+        top: 15%;
+
+    }
+    .order .order_section .order_description .product_type p{
+        left: 45%;
+    }
+    .order .order_section .order_description .product_size{
+        top: 30%;
+    }
+    .order .order_section .order_description .product_size p{
+        left: 45%;
+    }
+    .order .order_section .order_description .description{
+        top: 45%;
+        padding: 0rem 1rem;
+    }
+    .order .order_section .order_description .description button{
+        padding: 16px 18px;
+        gap: 10px;
+        width: 728px;
+        height: 50px;
+    }
 }
 @media screen and (max-width: 480px) {
     .order .order_section{
@@ -300,82 +354,90 @@
         align-items: center;
         justify-content: center;
     }
-    .order .order_vector{
-        margin:2rem 0rem;
+    .order .order_section .order_vector{
+        margin: 0rem 0rem;
+    }
+    .order .order_vector .product_view{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        Width:300px;
+        Height:212px;
     }
     .order .order_vector .product_view img{
+        width: 300px;
         height: 212px;
-        width: 390px;
     }
-    .order .order_vector .thumb_img img{
+    .order .order_vector .product_view video{
+        width: 300px;
+        height: 212px;
+    }
+    .order .order_vector .thumb{
         width: 40px;
         height: 40px;
     }
-    .order .order_vector .thumb_video video{
+    .order .order_vector .thumb .thumb_img img{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb .thumb_video video{
         width: 40px;
         height: 40px;
     }
     .order .order_vector .thumb .play1{
-        left: 220px;
+        left: 57%;
+        width: 20px;
+        height: 20px;
     }
     .order .order_vector .thumb .play2{
-        left: 300px;
+        left: 71%;
+        width: 20px;
+        height: 20px;
     }
-    .order_description{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        top: 0%;
-        left: 0%;
+    .order_section .order_description{
+        height: 100vh;
     }
-    .order_description .product_type{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 100%;
-        top: 0%;
-        left: 0%;
+    .order .order_section .order_description .product_type{
+        top: 15%;
     }
-    .order_description .product_type .type_select{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .order_description .product_type .type_select input{
-        width: 100%;
-        height: 70px;
-        margin: 2rem 2rem;
+    .order .order_section .order_description .product_type .type_select input{
+        width: 159px;
+        height: 52px;
         background: rgba(20, 20, 20, 0.02);
         border: 1px solid rgba(20, 20, 20, 0.2);
-        border-radius: 12px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 12px;
     }
-    .order_description .product_size{
+    .order .order_section .order_description .product_size{
+        top: 30%;
+    }
+    .order .order_section .order_description .product_size .size_select input{
+        width: 159px;
+        height: 52px;
+        background: rgba(20, 20, 20, 0.02);
+        border: 1px solid rgba(20, 20, 20, 0.2);
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .order .order_section .order_description .description{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        width: 100%;
         top: 45%;
-        left: 0%;
+        padding: 0rem 1rem;
     }
-    .order_description .product_size p{
-        position: absolute;
-        top: -10%;
-        left: 0%;
-        font-family: 'GeoSlab703 Md BT';
-        font-style: normal;
-        font-weight: 700;
+    .description .description_text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .order_description button{
+    .order .order_section .order_description .description button{
+        padding: 16px 18px;
+        gap: 10px;
         width: 342px;
         height: 50px;
     }

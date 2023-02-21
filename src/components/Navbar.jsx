@@ -22,11 +22,9 @@ function Navbar(){
 
         if (scroll_direction === "up") {
             navb.classList.add("trans");
-            document.querySelector(".hero_container").style.top= "10%";
             nav.classList.add("add");
         } else {
             navb.classList.remove("trans");
-            document.querySelector(".hero_container").style.top= "0";
             nav.classList.remove("add");
         }
     }
