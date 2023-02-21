@@ -30,11 +30,13 @@
     position: absolute;
     left: 20px;
     top: 50%;
+    border: none;
 }
 .test_container .testinomial_container .right_icon{
     position: absolute;
     right: 20px;
     top: 50%;
+    border: none;
 }
 .test_container .testinomial_container .testinomial{
     position: relative;

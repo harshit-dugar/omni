@@ -8,7 +8,6 @@
     display: grid;
     grid-template-columns: 60% 40%;
     height: 100%;
-    transition: 1s all ease;
 }
 .reveal{
     position: relative;
@@ -51,7 +50,7 @@
 }
 .benefit_section .benefit_section_left button{
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #EAEAEA;
     background: #EAEAEA;
     color: #141414;
     font-size: 1rem;
@@ -75,7 +74,7 @@
 @media screen and (max-width: 1024px) {
     .container .child_container .benefit_section .benefit_section_left{
         padding: 10%;
-        height: 70%;
+        height: 100%;
     }
     .container .child_container .benefit_section .benefit_section_left h2{
         font-size: 30px;
@@ -84,7 +83,7 @@
         font-size: 16px;
     }
     .container .child_container .benefit_section .benefit_section_right{
-        height: 70%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -95,9 +94,6 @@
     }
 }
 @media screen and (max-width: 768px){
-    .container .child_container .benefit_section{
-        height: 100%;
-    }
     .container .child_container .benefit_section .benefit_section_left{
         padding: 10%;
     }

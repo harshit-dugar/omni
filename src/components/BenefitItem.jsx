@@ -8,7 +8,7 @@ function BenefitItem(props){
         for(var i = 0; i < reveals.length; i++){
             var windowheight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 30;
+            var revealPoint = 15;
             if(elementTop < windowheight - revealPoint){
                 reveals[i].classList.add('active');
             }else{

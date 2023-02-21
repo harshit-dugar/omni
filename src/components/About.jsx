@@ -3,7 +3,7 @@ import about_img from "../assets/about_img.png"
 
 function About() {
     return (
-        <div id="About" className="container" data-aos="fade-right">
+        <div id="About" className="container" data-aos="fade-up">
             <div className="about_section">
                 <p className="about_p">#people’sMediaNetwork</p>
                 <div className="about_media grid grid-row-1">

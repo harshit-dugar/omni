@@ -14,9 +14,15 @@ function Footer(){
                     <FMenu />
                 </ul>
                 <div className="footer_socials">
-                    <a href="https://www.instagram.com/"><img src={instagram} alt="Instagram" /></a>
-                    <a href="https://www.twitter.com/"><img src={twitter} alt="Twitter"/></a>
-                    <a href="https://www.youtube.com/"><img src={youtube} alt="Youtube"/></a>
+                    <div className="icons">
+                        <a href="https://www.instagram.com/"><img src={instagram} alt="Instagram" /></a>
+                    </div>
+                    <div className="icons">
+                        <a href="https://www.twitter.com/"><img src={twitter} alt="Twitter"/></a>
+                    </div>
+                    <div className="icons">
+                        <a href="https://www.youtube.com/"><img src={youtube} alt="Youtube"/></a>
+                    </div>
                 </div>
                 <div className="footer_brand">
                     <a href="/"><img src={logo} alt="logo"/></a>

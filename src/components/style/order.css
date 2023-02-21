@@ -1,34 +1,79 @@
-.order_section{
+.order .order_section{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
     background: #EAEAEA;
 }
-.order .order_vector{
+.order .order_section .order_vector{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 2rem 5rem;
 }
-.order .order_vector .product_view img{
-    height: 500px;
+.order .order_vector .product_view{
     width: 700px;
+    height: 500px;
+}
+.order .order_vector .product_view img{
+    width: 700px;
+    height: 500px;
+}
+.order .order_vector .product_view video{
+    width: 100%;
+    height: 100%;
 }
 .order .order_vector .thumb{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 2rem 2rem;
+    margin: 2rem 0rem;
 }
-.order .order_vector .thumb img{
+.order .order_vector .thumb .thumb_img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+.order .order_vector .thumb .thumb_video{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+.order .order_vector .thumb .thumb_img img{
     width: 60px;
     height: 60px;
     border: 0.5px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
     margin-left: 1rem;
+    filter: grayscale(100%);
+}
+.thumb_img img:active{
+    filter: grayscale(0%);
+}
+.order .order_vector .thumb .thumb_video img{
+    width: 60px;
+    height: 60px;
+    border: 0.5px solid rgba(20, 20, 20, 0.2);
+    border-radius: 12px;
+    margin-left: 1rem;
+    filter: grayscale(100%);
+}
+.thumb_video img:active{
+    filter: grayscale(0%);
+}
+.thumb .play1{
+    position: absolute;
+    left:460px;
+}
+.thumb .play2{
+    position: absolute;
+    left:540px;
 }
 .order_section .order_description{
     position: relative;
@@ -145,78 +190,147 @@
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
 }
+.order_description .description{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    left: 0%;
+}
+.order_description .description .d_head{
+    width: 588px;
+    height: 24px;
+}
+.order_description .description .description_text{
+    height: 310px;
+    font-family: 'Geometric Slabserif 703 Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #141414;
+    margin: 2rem 0rem;
+}
+.order_description .description .description_text p{
+    margin: 1rem 0rem;
+}
+.order_description button{
+    position: absolute;
+    top: 90%;
+    width:500px;
+    height: 48px;
+    background: #141414;
+    font-family: 'GeoSlab703 Md BT';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.order_description button:hover{
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+    border: 2px solid #000;
+}
+@media screen and (max-width: 1024px) {
+   .order .order_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .order .order_vector .product_view img{
+        height: 212px;
+        width: 390px;
+    }
+    .order .order_vector .thumb_img img{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb_video video{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb .play1{
+        left: 220px;
+    }
+    .order .order_vector .thumb .play2{
+        left: 300px;
+    }
+}
 @media screen and (max-width: 768px) {
-    .order_section{
+    .order .order_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .order .order_vector .product_view img{
+        height: 212px;
+        width: 390px;
+    }
+    .order .order_vector .thumb_img img{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb_video video{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb .play1{
+        left: 220px;
+    }
+    .order .order_vector .thumb .play2{
+        left: 300px;
+    }   
+}
+@media screen and (max-width: 480px) {
+    .order .order_section{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
     .order .order_vector{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 2rem 5rem;
+        margin:2rem 0rem;
     }
     .order .order_vector .product_view img{
-        height: 500px;
-        width: 700px;
+        height: 212px;
+        width: 390px;
     }
-    .order .order_vector .thumb{
+    .order .order_vector .thumb_img img{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb_video video{
+        width: 40px;
+        height: 40px;
+    }
+    .order .order_vector .thumb .play1{
+        left: 220px;
+    }
+    .order .order_vector .thumb .play2{
+        left: 300px;
+    }
+    .order_description{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 2rem 2rem;
-    }
-    .order .order_vector .thumb img{
-        width: 60px;
-        height: 60px;
-        border: 0.5px solid rgba(20, 20, 20, 0.2);
-        border-radius: 12px;
-        margin-left: 1rem;
-    }
-    .order_section .order_description{
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100%;
-        margin: 2rem 0rem;
-    }
-    .order_section .order_description .product_info{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2rem;
-        width: 100%;
-        position:absolute;
-        top: 0;
-        left: 0;
-    }
-    .order_section .order_description .product_info h2{
-        font-family: 'Geometric Slabserif 703 Light';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 40px;
-        line-height: 100%;
-        text-align: center;
-        text-transform: capitalize;
-        color: #141414;
-    }
-    .order_section .order_description .product_info p{
-        font-family: 'GeoSlab703 Md BT';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 100%;
-        text-align: center;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        color: #141414;
+        height: 100%;
+        top: 0%;
+        left: 0%;
     }
     .order_description .product_type{
         display: flex;
@@ -225,10 +339,48 @@
         justify-content: center;
         position: absolute;
         width: 100%;
-        top: 20%;
+        top: 0%;
         left: 0%;
     }
+    .order_description .product_type .type_select{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .order_description .product_type .type_select input{
+        width: 100%;
+        height: 70px;
+        margin: 2rem 2rem;
+        background: rgba(20, 20, 20, 0.02);
+        border: 1px solid rgba(20, 20, 20, 0.2);
+        border-radius: 12px;
+    }
+    .order_description .product_size{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 45%;
+        left: 0%;
+    }
+    .order_description .product_size p{
+        position: absolute;
+        top: -10%;
+        left: 0%;
+        font-family: 'GeoSlab703 Md BT';
+        font-style: normal;
+        font-weight: 700;
+    }
+    .order_description button{
+        width: 342px;
+        height: 50px;
+    }
 }
+
 
 /* QNA */
 .qna_container{
