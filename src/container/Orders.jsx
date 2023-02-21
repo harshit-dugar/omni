@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import product1 from '../assets/order/product1.svg'
-import product2 from '../assets/order/product2.svg'
+import product2 from '../assets/order/product2.png'
 import product3 from '../assets/videos/order/product3.mp4'
 import product4 from '../assets/videos/order/product4.mp4'
 import play from '../assets/icons/Play.svg'
