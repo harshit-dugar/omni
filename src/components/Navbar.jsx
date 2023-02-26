@@ -1,4 +1,6 @@
 import React from "react";
+import { RiCloseLine } from "react-icons/ri";
+import { RiMenuLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import logo from '../assets/hero/Logo.svg'
 
@@ -12,6 +14,8 @@ export const  Menu = () => (
 let scroll_position= 500;
 let scroll_direction;
 function Navbar(){
+    const [toggleNav,setNav] = React.useState(false);
+
     function nav(){
         const nav = document.querySelector(".navbar_active");
         nav.classList.add("navbar_active");
@@ -31,6 +35,19 @@ function Navbar(){
     window.addEventListener('scroll',nav);
     return(
         <div className="navbar">
+            <div className="navbar_toggle">
+                {
+                    toggleNav ? <RiCloseLine color="#141414" onClick={()=>setNav(false)} />
+                    : <RiMenuLine color="#141414" onClick={()=>setNav(true)} />
+                }
+                {toggleNav && (
+                    <div className="navbar_menu_mobile">
+                        <div className="menu_links">
+                            <Menu />
+                        </div>
+                    </div>
+                )}
+            </div>
             <div className="navbar_logo">
                 <a href="/"><img src={logo} alt='lgo'/></a>
             </div>

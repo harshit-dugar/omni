@@ -6,7 +6,6 @@ function House(){
     return(
         <div id="room" className="container " data-aos="fade-up">
             <div className="child_container_room">
-                <p>Amazing for <br/> your house</p>
                 <video autoPlay loop muted src={room}/>
             </div>
         </div>

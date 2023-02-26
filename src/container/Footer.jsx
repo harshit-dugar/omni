@@ -1,8 +1,8 @@
 import React from "react";
 import { Menu as FMenu} from '../components/Navbar';
-import instagram from '../assets/icons/instagram.png';
-import youtube from '../assets/icons/youtube.png';
-import twitter from '../assets/icons/twitter.png';
+import instagram from '../assets/icons/instagram.svg';
+import youtube from '../assets/icons/youtube.svg';
+import twitter from '../assets/icons/twitter.svg';
 import logo from '../assets/Logo.svg';
 import { Link } from "react-router-dom";
 

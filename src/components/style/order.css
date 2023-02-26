@@ -13,69 +13,49 @@
     margin: 2rem 5rem;
 }
 .order .order_vector .product_view{
-    width: 700px;
-    height: 500px;
+    display: flex;
 }
 .order .order_vector .product_view img{
     width: 700px;
     height: 500px;
 }
 .order .order_vector .product_view video{
-    width: 100%;
-    height: 100%;
+    width: 700px;
+    height: 500px;
 }
 .order .order_vector .thumb{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 2rem 0rem;
 }
-.order .order_vector .thumb .thumb_img{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0rem;
-}
-.order .order_vector .thumb .thumb_video{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0rem;
-}
-.order .order_vector .thumb .thumb_img img{
+.order .order_vector .thumb img{
     width: 60px;
     height: 60px;
-    border: 0.5px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
     margin-left: 1rem;
     filter: grayscale(100%);
 }
-.order .order_vector .thumb .thumb_img img:focus,
-.order .order_vector .thumb .thumb_img img:hover,
-.order .order_vector .thumb .thumb_img img:active{
+.order .order_vector .thumb img:focus,
+.order .order_vector .thumb img:hover,
+.order .order_vector .thumb img:active{
     filter: grayscale(0%);
 }
-.order .order_vector .thumb .thumb_video video{
-    width: 60px;
-    height: 60px;
-    border: 0.5px solid rgba(20, 20, 20, 0.2);
-    border-radius: 12px;
-    margin-left: 1rem;
-    filter: grayscale(100%);
-}
-.thumb_video video:active{
-    filter: grayscale(0%);
-}
-.thumb .play1{
+ .order .thumb .play1 img{
     position: absolute;
-    left:460px;
+    left: 54%;
+    top: 20%;
+    height: 40px;
+    width: 40px;
 }
-.thumb .play2{
+.order .thumb .play2 img{
     position: absolute;
-    left:540px;
+    left: 77%;
+    top: 20%; 
+    height: 40px;
+    width: 40px;
 }
 .order .order_section .order_description{
     position: relative;
@@ -121,13 +101,11 @@
 .order_description .product_type{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     position: absolute;
-    width: 100%;
     top: 20%;
     left: 0%;
-    padding: 0rem 5rem;
 }
 .order_description .product_type p{
     position: absolute;
@@ -140,32 +118,31 @@
     line-height: 100%;
     text-transform: capitalize;
     color: #141414;
-    padding-left: 1rem;
 }
 .order_description .product_type .type_select{
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-around;
+    justify-content:flex-start;
 }
 .order_description .product_type .type_select input{
-    width: 280px;
+    width: 250px;
     height: 70px;
     margin: 2rem 0rem;
     background: rgba(20, 20, 20, 0.02);
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
+    margin-left: 1rem;
+    color: #5A5A5A;
 }
 .order_description .product_size{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:baseline;
     justify-content: center;
     position: absolute;
-    width: 100%;
     top: 45%;
     left: 0%;
-    padding: 0rem 5rem;
 }
 .order_description .product_size p{
     position: absolute;
@@ -178,33 +155,38 @@
     line-height: 100%;
     text-transform: capitalize;
     color: #141414;
-    padding-left: 1rem;
 }
 .order_description .product_size .size_select{
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-around;
+    justify-content:flex-start;
 }
 .order_description .product_size .size_select input{
-    width: 280px;
+    width: 130px;
     height: 70px;
     margin: 2rem 0rem;
     background: rgba(20, 20, 20, 0.02);
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 12px;
+    margin-left: 1rem;
+    color: #5A5A5A;
+}
+.order_description .product_size .size_select input:focus,
+.order_description .product_type .type_select input:focus{
+    border: 1.75px solid #141414;
+    border-radius: 12px;
+    color: #141414;
 }
 .order .order_section .order_description .description{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
     position: absolute;
-    width: 100%;
     top: 70%;
     left: 0%;
 }
 .order_description .description .d_head{
-    width: 400px;
     height: 18px;
     font-family: 'GeoSlab703 Md BT';
     font-style: normal;
@@ -223,7 +205,7 @@
     line-height: 100%;
     text-transform: capitalize;
     color: #141414;
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     padding-right: 2rem;    
 }
 .order_description .description .description_text p{
@@ -235,7 +217,7 @@
 .order_description button{
     position: relative;
     top: 40%;
-    width:500px;
+    width:530px;
     height: 48px;
     background: #141414;
     font-family: 'GeoSlab703 Md BT';
@@ -274,18 +256,33 @@
     }
     .order .order_section .order_description .product_type{
         top: 15%;
+        margin: 1rem 1rem;
+    }
+    .order .order_section .order_description .product_type p{
+        left: 50%;
+    }
+    .order .order_section .order_description .product_type .type_select input{
+        width: 350px;
     }
     .order .order_section .order_description .product_size{
-        top: 30%;
+        top: 35%;
+        margin: 1rem 1rem;
+    }
+    .order .order_section .order_description .product_size p{
+        left: 50%;
+    }
+    .order .order_section .order_description .product_size .size_select input{
+        width: 350px;
     }
     .order .order_section .order_description .description{
-        top: 45%;
+        top: 55%;
+        margin: 1rem 1rem;
         padding: 0rem 1rem;
     }
     .order .order_section .order_description .description button{
         padding: 16px 18px;
         gap: 10px;
-        width: 728px;
+        width: 720px;
         height: 50px;
     }
 }
@@ -300,7 +297,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        Width:1023px;
+        Width:750px;
         Height:550px;
     }
     .order .order_vector .thumb .play1{
@@ -312,38 +309,35 @@
     .order_section .order_description{
         height: 100vh;
     }
-    .order .order_section .order_description .product_info h1{
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 100%;
-        margin-bottom: 1rem;
-    }
-    .order .order_section .order_description .product_info p{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 100%;
-    }
     .order .order_section .order_description .product_type{
         top: 15%;
-
+        margin: 1rem 1rem;
     }
     .order .order_section .order_description .product_type p{
-        left: 45%;
+        left: 48%;
+    }
+    .order .order_section .order_description .product_type .type_select input{
+        width: 350px;
     }
     .order .order_section .order_description .product_size{
-        top: 30%;
+        top: 35%;
+        margin: 1rem 1rem;
     }
     .order .order_section .order_description .product_size p{
-        left: 45%;
+        left: 48%;
+    }
+    .order .order_section .order_description .product_size .size_select input{
+        width: 350px;
     }
     .order .order_section .order_description .description{
-        top: 45%;
+        top: 55%;
+        margin: 1rem 1rem;
         padding: 0rem 1rem;
     }
     .order .order_section .order_description .description button{
         padding: 16px 18px;
         gap: 10px;
-        width: 728px;
+        width: 710px;
         height: 50px;
     }
 }
@@ -361,84 +355,69 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        Width:300px;
+        Width:390px;
         Height:212px;
     }
     .order .order_vector .product_view img{
-        width: 300px;
+        width: 100%;
         height: 212px;
     }
     .order .order_vector .product_view video{
-        width: 300px;
+        width: 100%;
         height: 212px;
     }
-    .order .order_vector .thumb{
+    .order .order_vector .thumb img{
         width: 40px;
         height: 40px;
     }
-    .order .order_vector .thumb .thumb_img img{
-        width: 40px;
-        height: 40px;
-    }
-    .order .order_vector .thumb .thumb_video video{
-        width: 40px;
-        height: 40px;
-    }
-    .order .order_vector .thumb .play1{
-        left: 57%;
+    .order .order_vector .thumb .play1 img{
         width: 20px;
         height: 20px;
     }
-    .order .order_vector .thumb .play2{
-        left: 71%;
+    .order .order_vector .thumb .play2 img{
         width: 20px;
         height: 20px;
     }
     .order_section .order_description{
-        height: 100vh;
+        height: 120vh;
+    }
+    .order .order_section .order_description .product_info{
+        top: 5%;
+        width: 90%;
+        margin: 1rem 1rem;
     }
     .order .order_section .order_description .product_type{
-        top: 15%;
+        top: 25%;
+        margin: 1rem 1rem;
+    }
+    .order .order_section .order_description .product_type p{
+        left: 48%;
     }
     .order .order_section .order_description .product_type .type_select input{
-        width: 159px;
-        height: 52px;
-        background: rgba(20, 20, 20, 0.02);
-        border: 1px solid rgba(20, 20, 20, 0.2);
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 12px;
+        width: 150px;
     }
     .order .order_section .order_description .product_size{
-        top: 30%;
+        top: 45%;
+        margin: 1rem 1rem;
+    }
+    .order .order_section .order_description .product_size p{
+        left: 48%;
     }
     .order .order_section .order_description .product_size .size_select input{
-        width: 159px;
-        height: 52px;
-        background: rgba(20, 20, 20, 0.02);
-        border: 1px solid rgba(20, 20, 20, 0.2);
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 12px;
+        width: 150px;
     }
     .order .order_section .order_description .description{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 45%;
+        top: 65%;
+        margin: 1rem 1rem;
         padding: 0rem 1rem;
     }
-    .description .description_text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .order_description .description .d_head{
+        margin-left: 40%;
     }
     .order .order_section .order_description .description button{
         padding: 16px 18px;
         gap: 10px;
-        width: 342px;
+        width: 310px;
         height: 50px;
     }
 }

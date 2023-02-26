@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {IoIosArrowDown} from 'react-icons/io'
 import product1 from '../assets/order/product1.svg'
 import product2 from '../assets/order/product2.png'
 import product3 from '../assets/videos/order/product3.mp4'
@@ -62,19 +63,21 @@ function Orders(){
                 <div className="product_view">
                     {
                         product.image.includes('.mp4') ?
-                            <video src={product.image} autoPlay loop muted />
+                            <video src={product.image} autoPlay loop muted height={500} width={700} />
                             :
                             <img src={product.image} alt="product" />
                     }
                 </div>
                 <div className="thumb">
-                    <div className="thumb_img">   
-                        {productsthumbs.map((product) => (
-                            <img src={product.image} alt="product" id={product.id} onClick={handleProductThumb} />
-                        ))}
+                    {productsthumbs.map((product) => (
+                        <img src={product.image} alt="product" id={product.id} onClick={handleProductThumb} />
+                    ))}   
+                    <div className="play1"> 
+                        <img src={play} alt="" id={productsthumb[2].id} onClick={handleProductThumb}/>
                     </div>
-                    <img className="play1" src={play} alt="" id={productsthumb[2].id} onClick={handleProductThumb}/>
-                    <img className="play2" src={play} alt="" id={productsthumb[3].id} onClick={handleProductThumb} />
+                    <div className="play2">
+                        <img src={play} alt="" id={productsthumb[3].id} onClick={handleProductThumb} />
+                    </div>
                 </div>
             </div>
             <div className="order_description">
@@ -97,7 +100,7 @@ function Orders(){
                     </div>
                 </div>
                 <div className="description">
-                    <p className="d_head" onClick={()=>toggleDescription()}>Description <i></i> </p>
+                    <p className="d_head" onClick={()=>toggleDescription()}>Description <IoIosArrowDown className="arrow"/> </p>
                     <div className="description_text">
                         {description.open ? 
                             <div>
