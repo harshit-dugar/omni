@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {IoIosArrowDown} from 'react-icons/io'
+import {Link} from 'react-router-dom'
 import product1 from '../assets/order/product1.svg'
 import product2 from '../assets/order/product2.png'
 import product3 from '../assets/videos/order/product3.mp4'
@@ -118,7 +119,7 @@ function Orders(){
                             : null
                         }
                     </div>
-                    <button className=".button">Add to cart</button>
+                    <Link to="/cart"><button className=".button">Add to cart</button></Link>
                 </div>
             </div>
         </div>
