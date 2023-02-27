@@ -47,12 +47,8 @@ function Checkout() {
                     <React.Fragment>
                         {step === steps.length ? (
                             <React.Fragment>
-                                <Typography variant="h5" gutterBottom>
-                                    Thank you for your order.
-                                </Typography>
-                                <Typography variant="subtitle1">
-                                    Your order number is #2001539. We have emailed your order confirmation, and will
-                                    send you an update when your order has shipped.
+                                <Typography className="message" variant="h5" gutterBottom>
+                                   <p>Order Successfully placed </p>
                                 </Typography>
                             </React.Fragment>
                         ) : (
@@ -81,7 +77,7 @@ function Checkout() {
                         <h5>$300 USD</h5>
                     </div>
                     <div className="total_summary">
-
+                        
                     </div>
                 </div>
             </div>

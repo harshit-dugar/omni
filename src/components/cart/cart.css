@@ -108,3 +108,17 @@
     margin: 3rem 3rem;
     height: 100%;
 }
+.form_container .message{
+    margin: 2rem 2rem;
+    padding: 2rem 2rem;
+    border: 5px solid #000000;
+}
+.form_container .message p{
+    font-family: 'GeoSlab703 Md BT';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #000000;
+}
