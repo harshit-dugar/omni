@@ -6,7 +6,6 @@ import { Header } from "../../container";
 import { Footer } from "../../container";
 import { Link } from "react-router-dom";
 import cartProduct from "../../assets/order/product.svg";
-// import Checkout from "./Checkout";
 
 function Cart() {
     const [qty, setQty] = React.useState(1);
@@ -18,7 +17,6 @@ function Cart() {
             setQty(qty - 1);
         }
     }
-    // const [checkout, setCheckout] = React.useState(false);
     
     return (
         <div className="cart">
@@ -53,7 +51,6 @@ function Cart() {
                         <h3>$ 1,000</h3>
                     </div>
                     <Link to="/checkout"><button>Checkout</button></Link>
-                    {/* {checkout && <Checkout in={checkout} />} */}
                     <p>*Please note that additional taxes and fees may be applied by your local <br/> government or carrier upon delivery</p>
                 </div>
             </div>

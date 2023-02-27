@@ -37,10 +37,10 @@ function Checkout() {
             <h1>Checkout</h1>
             <div className="checkout_container">
                 <div className="form_container">
-                    <Stepper activeStep={step} alternativeLabel>
+                    <Stepper style={{color:"#141414"}} activeStep={step} alternativeLabel>
                         {steps.map((label) => (
-                            <Step key={label}>
-                                <StepLabel>{label}</StepLabel>
+                            <Step style={{color:"#141414"}} key={label}>
+                                <StepLabel style={{color:"#141414"}}>{label}</StepLabel>
                             </Step>
                         ))}
                     </Stepper>
